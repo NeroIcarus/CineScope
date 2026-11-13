@@ -1,5 +1,5 @@
 
-package cinema;
+package cinema.main;
 
 import java.util.HashMap;
 import java.util.Map;

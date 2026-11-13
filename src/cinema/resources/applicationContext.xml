@@ -1,0 +1,23 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="reviewRepository"
+          class="cinema.main.review.ReviewRepository"/>
+
+    <bean id="reviewService"
+          class="cinema.main.review.ReviewService">
+        <constructor-arg ref="reviewRepository"/>
+    </bean>
+
+    <bean id="reviewController"
+          class="cinema.main.review.ReviewController">
+        <constructor-arg ref="reviewService"/>
+    </bean>
+
+</beans>
